@@ -14,28 +14,32 @@ const navigation = [
 
 const features = [
   {
-    name: 'Track games up to 6 Players',
+    name: 'Track everything from commander damage to poison counters',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: BoltIcon,
+    icon: DevicePhoneMobileIcon,
+    image: <StaticImage src="../images/screenshots/9-gameplay-4p-dmg.png" alt="" className="h-full w-full object-cover object-center" />
   },
   {
     name: 'Flip coins and roll dices',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
     icon: RectangleGroupIcon,
+    image: <StaticImage src="../images/screenshots/7-in-game-settings.png" alt="" className="h-full w-full object-cover object-center" />
   },
   {
-    name: 'Search for cards for rulings info',
+    name: 'Search for cards, both in and out of games',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
     icon: MagnifyingGlassIcon,
+    image: <StaticImage src="../images/screenshots/6-search-in-game.jpg" alt="" className="h-full w-full object-cover object-center" />
   },
   {
-    name: 'Customizable interface',
+    name: 'Track games up to 6 Players',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: DevicePhoneMobileIcon,
+    icon: BoltIcon,
+    image: <StaticImage src="../images/screenshots/8-gameplay-6p.png" alt="" className="h-full w-full object-cover object-center" />
   },
 ];
 
@@ -167,8 +171,12 @@ const FeatureSection = () => {
           <div className="grid grid-cols-1 gap-y-16 md:grid-cols-2 md:gap-x-12 md:gap-y-16">
             {features.map((feature) => (
               <div key={feature.name} className="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-split-blue text-white sm:shrink-0">
+                {/* <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-split-blue text-white sm:shrink-0">
                   <feature.icon className="h-8 w-8" aria-hidden="true" />
+                </div> */}
+                {/* {feature.image} */}
+                <div className="h-full w-44 overflow-hidden rounded-lg mt-0 sm:mt-0 lg:mt-0 lg:opacity-100">
+                  {feature.image}
                 </div>
                 <div className="sm:min-w-0 sm:flex-1">
                   <p className="text-lg font-semibold leading-8 text-gray-900">{feature.name}</p>
