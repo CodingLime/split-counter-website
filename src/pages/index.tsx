@@ -156,7 +156,7 @@ const FeatureSection = () => {
     <div className="bg-white py-24 sm:py-32 lg:py-36">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="sm:text-center">
-          <h2 id="features" className="text-xl font-semibold leading-8 split-blue">Features</h2>
+          <h2 id="features" className="text-xl font-semibold leading-8 text-split-blue">Features</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">The best way to track your games</p>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
             From tracking your pods life totals, to rolling dices and searching for cards to know about their rullings. And more to come...
@@ -180,8 +180,77 @@ const FeatureSection = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+const CTA = () => {
+  return (
+    <div className="bg-gray-900">
+      <div className="mx-auto max-w-7xl py-12 px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <span className="block text-white">Ready to start a game?</span>
+          <span className="block text-split-yellow">Download the Split App now!</span>
+        </h2>
+        <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+          <div className="inline-flex rounded-md shadow">
+            <a
+              href="#"
+              className="inline-flex items-center justify-center rounded-md border border-transparent bg-split-yellow px-5 py-3 text-base font-medium text-white hover:bg-gray-900"
+            >
+              Download Android
+            </a>
+          </div>
+          <div className="ml-3 inline-flex rounded-md shadow">
+            <a
+              href="#"
+              className="inline-flex items-center justify-center rounded-md border border-transparent bg-split-yellow px-5 py-3 text-base font-medium text-white hover:bg-gray-900"
+            >
+              Download iOS
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <div className="bg-gray-900">
+      <div className="max-w-2xl mx-auto text-white py-10">
+        <div className="text-center">
+          <h3 className="text-3xl mb-3"> Download Split Counter App</h3>
+          <p>Track all yours games, the right way, with a complete tool.</p>
+          <div className="flex justify-center my-10">
+            <div className="flex items-center border w-auto rounded-lg px-4 py-2  mx-2">
+              <StaticImage src="https://cdn-icons-png.flaticon.com/512/888/888857.png" alt="" className="w-7 md:w-8" />
+              <div className="text-left ml-3">
+                <p className='text-xs text-gray-200'>Download on </p>
+                <p className="text-sm md:text-base"> Google Play Store </p>
+              </div>
+            </div>
+            <div className="flex items-center border w-auto rounded-lg px-4 py-2  mx-2">
+              <StaticImage src="https://cdn-icons-png.flaticon.com/512/888/888841.png" alt="" className="w-7 md:w-8" />
+              <div className="text-left ml-3">
+                <p className='text-xs text-gray-200'>Download on </p>
+                <p className="text-sm md:text-base"> Apple Store </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="mt-14 flex flex-col md:flex-row md:justify-between items-center text-sm text-white">
+          <p className="order-2 md:order-1 mt-8 md:mt-0"> &copy; Split Counter App, 2022. </p>
+          <div className="order-1 md:order-2">
+            <span className="px-2">About us</span>
+            <span className="px-2 border-l">Contact us</span>
+            <span className="px-2 border-l">Privacy Policy</span>
+            <span className="px-2 border-l">Terms of Service</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const IndexPage: React.FC<PageProps> = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -254,10 +323,14 @@ const IndexPage: React.FC<PageProps> = () => {
           </Dialog>
         </div>
       </div>
-      <main className="p-5 sm:p-10 lg:p-20" /* style={pageStyles} */>
+      <main className="p-5 sm:p-10 lg:p-20">
         <HeroSection />
         <FeatureSection />
+        <CTA />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };

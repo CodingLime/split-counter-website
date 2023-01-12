@@ -6,10 +6,30 @@
     margin-top: -34.5rem;
 }
 
-.split-blue {
+.text-split-blue {
     color: #0072b2;
+}
+.text-split-blue-dark {
+    color: #003959;
 }
 
 .bg-split-blue {
     background-color: #0072b2;
+}
+.bg-split-blue-dark {
+    background-color: #003959;
+}
+
+.text-split-yellow {
+    color: #ffa900;
+}
+.text-split-yellow-dark {
+    color: #7f5400;
+}
+
+.bg-split-yellow {
+    background-color: #ffa900;
+}
+.bg-split-yellow-dark {
+    background-color: #7f5400;
 }
