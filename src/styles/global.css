@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-margin-top {
+    margin-top: -34.5rem;
+}

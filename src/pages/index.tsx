@@ -76,8 +76,8 @@ const HeroSection = () => {
                       </div>
                     </div>
                     {/* 2 RIGHT */}
-                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8 sm:-mt-52 lg:-mt-32">
-                      <div className="h-full w-44 overflow-hidden rounded-lg opacity-0 sm:opacity-100">
+                    <div className="grid flex-shrink-0 grid-cols-1 custom-margin-top gap-y-6 lg:gap-y-8 sm:-mt-52 lg:-mt-32">
+                      <div className="h-full w-44 overflow-hidden rounded-lg opacity-100">
                         <StaticImage
                           src="../images/screenshots/7-in-game-settings.png"
                           alt=""
@@ -203,7 +203,7 @@ const IndexPage: React.FC<PageProps> = () => {
           </Dialog>
         </div>
       </div>
-      <main className="p-20" /* style={pageStyles} */>
+      <main className="p-5 sm:p-10 lg:p-20" /* style={pageStyles} */>
         <HeroSection />
       </main>
     </div>
