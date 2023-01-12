@@ -50,10 +50,10 @@ const HeroSection = () => {
         <div className="relative mx-auto max-w-6xl px-4 sm:static sm:px-6 lg:px-8">
           <div className="sm:max-w-sm">
             <h1 className="font text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Your life counter app
+              Split Counter
             </h1>
             <p className="mt-4 text-xl text-gray-500">
-              Dolor voluptas minus voluptate et porro veritatis. Est et aut dolorum labore qui tenetur fugiat quia.…
+              {"Track your games like never before. From your life total, to commander damage (both single or partner damage), to search about cards you and your enemies want to know rulings about."}
             </p>
           </div>
           <div>
@@ -203,7 +203,7 @@ const CTA = () => {
           <div className="inline-flex rounded-md shadow">
             <a
               href="#"
-              className="inline-flex items-center justify-center rounded-md border border-transparent bg-split-yellow px-5 py-3 text-base font-medium text-white hover:bg-gray-900"
+              className="inline-flex items-center justify-center rounded-md border border-transparent bg-split-yellow px-5 py-3 text-base font-medium text-white hover:bg-gray-700"
             >
               Download Android
             </a>
@@ -211,7 +211,7 @@ const CTA = () => {
           <div className="ml-3 inline-flex rounded-md shadow">
             <a
               href="#"
-              className="inline-flex items-center justify-center rounded-md border border-transparent bg-split-yellow px-5 py-3 text-base font-medium text-white hover:bg-gray-900"
+              className="inline-flex items-center justify-center rounded-md border border-transparent bg-split-yellow px-5 py-3 text-base font-medium text-white hover:bg-gray-700"
             >
               Download iOS
             </a>
