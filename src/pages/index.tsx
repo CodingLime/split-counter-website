@@ -1,193 +1,215 @@
-import * as React from "react"
-import type { HeadFC, PageProps } from "gatsby"
+import * as React from "react";
+import type { HeadFC, PageProps } from "gatsby";
+import { useState } from 'react';
+import { Dialog } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { StaticImage } from 'gatsby-plugin-image';
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const doclistStyles = {
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
+const navigation = [
+  { name: 'Home', href: '#' },
+  { name: 'Features', href: '#' },
+  { name: 'Download', href: '#' },
+  { name: 'Blog', href: '#' },
+];
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
+const HeroSection = () => {
+  return (
+    <div className="relative overflow-y-clip overflow-x-clip bg-white">
+      <div className="pt-16 pb-80 sm:pt-20 sm:pb-40 lg:pt-20 lg:pb-48">
+        <div className="relative mx-auto max-w-6xl px-4 sm:static sm:px-6 lg:px-8">
+          <div className="sm:max-w-sm">
+            <h1 className="font text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Your life counter app
+            </h1>
+            <p className="mt-4 text-xl text-gray-500">
+              Dolor voluptas minus voluptate et porro veritatis. Est et aut dolorum labore qui tenetur fugiat quia.…
+            </p>
+          </div>
+          <div>
+            <div className="mt-10">
+              {/* Decorative image grid */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none -mb-2 lg:absolute lg:inset-y-0 lg:-mx-auto lg:w-10/12 lg:max-w-6xl"
+              >
+                <div className="absolute transform mt-20 sm:-mt-20 sm:left-52 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/4 lg:translate-x-8">
+                  <div className="flex items-center space-x-6 lg:space-x-8">
+                    {/* 2 LEFT */}
+                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8 -mt-72 sm:mt-0 lg:-mt-32">
+                      <div className="h-full w-44 overflow-hidden rounded-lg mt-0 sm:-mt-64 lg:mt-0 sm:opacity-0 lg:opacity-100">
+                        <StaticImage
+                          src="../images/screenshots/3-gameplay-4p.png"
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                      <div className="h-full w-44 overflow-hidden rounded-lg">
+                        <StaticImage
+                          src="../images/screenshots/2-gameplay-2p.png"
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                    </div>
+                    {/* 3 MIDDLE */}
+                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8 sm:mt-20 lg:mt-32">
+                      <div className="h-full w-44 overflow-hidden rounded-lg">
+                        <StaticImage
+                          src="../images/screenshots/1-main.png"
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                      <div className="h-full w-44 overflow-hidden rounded-lg">
+                        <StaticImage
+                          src="../images/screenshots/6-search-in-game.jpg"
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                      <div className="h-full w-44 overflow-hidden rounded-lg">
+                        <StaticImage
+                          src="../images/screenshots/5-card-detail-counterbalance.png"
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                    </div>
+                    {/* 2 RIGHT */}
+                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8 sm:-mt-52 lg:-mt-32">
+                      <div className="h-full w-44 overflow-hidden rounded-lg opacity-0 sm:opacity-100">
+                        <StaticImage
+                          src="../images/screenshots/7-in-game-settings.png"
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                      <div className="h-full w-44 overflow-hidden rounded-lg">
+                        <StaticImage
+                          src="../images/screenshots/4-search-outside-game.png"
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  display: `inline-block`,
-  marginBottom: 24,
-  marginRight: 12,
-}
+              <a
+                href="#"
+                className="inline-block mt-2 mr-2 rounded-md border border-transparent bg-gray-800 py-3 px-6 text-center font-medium text-white hover:bg-gray-700"
+              >
+                Download Android
+              </a>
+              <a
+                href="#"
+                className="inline-block mt-2 rounded-md border border-transparent bg-gray-800 py-3 px-8 text-center font-medium text-white hover:bg-gray-700"
+              >
+                Download iOS
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLinks = [
-  {
-    text: "TypeScript Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/",
-    color: "#8954A8",
-  },
-  {
-    text: "GraphQL Typegen Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/",
-    color: "#8954A8",
-  }
-]
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative" as "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
+const HeroSectionFlex = () => {
+  return (
+    <div className="relative overflow-y-clip overflow-x-clip  bg-white">
+      
+    </div>
+  );
+};
 
 const IndexPage: React.FC<PageProps> = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={doclistStyles}>
-        {docLinks.map(doc => (
-          <li key={doc.url} style={docLinkStyle}>
-            <a
-              style={linkStyle}
-              href={`${doc.url}?utm_source=starter&utm_medium=ts-docs&utm_campaign=minimal-starter-ts`}
-            >
-              {doc.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <ul style={listStyles}>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter-ts`}
-              >
-                {link.text}
+    <div className="isolate bg-white">
+      <div className="pt-12 mx-auto max-w-7xl">
+        <div>
+          <nav className="flex mx-10 h-20 items-center justify-between" aria-label="Global">
+            <div className="flex lg:min-w-0 lg:flex-initial" aria-label="Global">
+              <a href="#" className="-m-1.5 p-1.5">
+                <span className="sr-only">Split Counter App</span>
+                <StaticImage className="w-24" src="../images/icon-no-bg.png" alt="Slip counter app logo" />
               </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
-  )
-}
+            </div>
+            <div className="flex sm:hidden lg:hidden">
+              <button
+                type="button"
+                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                onClick={() => setMobileMenuOpen(true)}
+              >
+                <span className="sr-only">Open main menu</span>
+                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+              </button>
+            </div>
+            <div className="hidden sm:flex sm:flex-auto sm:gap-x-12 lg:flex ml-16 sm:ml-8 lg:min-w-0 lg:flex-auto lg:justify-start lg:gap-x-12">
+              {navigation.map((item) => (
+                <a key={item.name} href={item.href} className="font-semibold text-lg text-gray-900 hover:text-gray-900">
+                  {item.name}
+                </a>
+              ))}
+            </div>
+            {/* <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
+              <a
+                href="#"
+                className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+              >
+                Feeling cute, might delete later
+              </a>
+            </div> */}
+          </nav>
+          <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+            <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 sm:hidden lg:hidden">
+              <div className="flex mx-10 h-20 items-center justify-between">
+                <div className="flex">
+                  <a href="#" className="-m-1.5 mt-8 p-1.5">
+                    <span className="sr-only">Split Counter App</span>
+                    <StaticImage className="w-24" src="../images/icon-no-bg.png" alt="Slip counter app logo" />
+                  </a>
+                </div>
+                <div className="flex">
+                  <button
+                    type="button"
+                    className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <span className="sr-only">Close menu</span>
+                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                  </button>
+                </div>
+              </div>
+              <div className="mt-20 flow-root">
+                <div className="-my-6 divide-y divide-gray-500/10">
+                  <div className="space-y-2 py-6 mx-10">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className="-mx-1 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Dialog.Panel>
+          </Dialog>
+        </div>
+      </div>
+      <main className="p-20" /* style={pageStyles} */>
+        <HeroSection />
+      </main>
+    </div>
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => <title>Home Page</title>;
