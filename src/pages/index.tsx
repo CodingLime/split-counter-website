@@ -30,14 +30,14 @@ const features = [
   {
     name: 'Search for cards, both in and out of games',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Ever wanted to search about a card during a game to know about its rulings ? You can do that with the Split app! Or how about a quick place to open up, search a card to know about its different prints ? Or to check on prices ? From cardmarket to TCGplayer. Or see the legal formats a card is allow ? We have it all!',
     icon: MagnifyingGlassIcon,
     image: <StaticImage src="../images/screenshots/6-search-in-game.jpg" alt="" className="h-full w-full object-cover object-center" />
   },
   {
     name: 'Track games up to 6 Players',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      "Be it from a 1v1 game to a 6 player game, Split helps you keep track of all those games! And even with multiple designs for 4 players and up, so Split reprents accurately all your positions on the table. And be it 1v1 or 6 players, you can track always their commander damage, etc. Don't leave anyone out with Split!",
     icon: BoltIcon,
     image: <StaticImage src="../images/screenshots/8-gameplay-6p.png" alt="" className="h-full w-full object-cover object-center" />
   },
