@@ -16,14 +16,14 @@ const features = [
   {
     name: 'Track everything from commander damage to poison counters',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Keep track of your life points, be it in a 1v1 game, commander game, anything. Talking about commander, keep track of that too! Add de commander damage on the respective enemy colors, and it will reduce de same amount from your life points. Does an opponent have partner commanders ? You can also keep track of that too. And those nasty poison counters ? Of course we have a spot to keep track of them too!',
     icon: DevicePhoneMobileIcon,
     image: <StaticImage src="../images/screenshots/9-gameplay-4p-dmg.png" alt="" className="h-full w-full object-cover object-center" />
   },
   {
     name: 'Flip coins and roll dices',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Need to flip a coin or more for those sweet Krark, the Thumbless triggers ? We have you covered! Or How about rolling some dice quickly ? Be it form a D4 to a D20 ? We have all of them, never skip a beat looking for them, there are right here in your app!',
     icon: RectangleGroupIcon,
     image: <StaticImage src="../images/screenshots/7-in-game-settings.png" alt="" className="h-full w-full object-cover object-center" />
   },
@@ -175,7 +175,7 @@ const FeatureSection = () => {
                   <feature.icon className="h-8 w-8" aria-hidden="true" />
                 </div> */}
                 {/* {feature.image} */}
-                <div className="h-full w-44 overflow-hidden rounded-lg mt-0 sm:mt-0 lg:mt-0 lg:opacity-100">
+                <div className="h-96 w-44 overflow-hidden rounded-lg mt-0 sm:mt-0 lg:mt-0 lg:opacity-100">
                   {feature.image}
                 </div>
                 <div className="sm:min-w-0 sm:flex-1">
