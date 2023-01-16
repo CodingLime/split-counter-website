@@ -233,7 +233,7 @@ const Footer = () => {
                 <p className="text-sm md:text-base"> Google Play Store </p>
               </div>
             </div>
-            <div className="flex items-center border w-auto rounded-lg px-4 py-2 mx-2 pr-14">
+            <div className="flex items-center border w-auto rounded-lg px-4 py-2 mx-2 pr-14 mt-6 sm:mt-0">
               <StaticImage src="../images/apple-logo.png" alt="" className="w-7 md:w-8" />
               <div className="text-left ml-3">
                 <p className='text-xs text-gray-200'>Download on </p>
