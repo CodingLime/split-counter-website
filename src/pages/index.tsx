@@ -2,7 +2,7 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon, BoltIcon, DevicePhoneMobileIcon, MagnifyingGlassIcon, RectangleGroupIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const navigation = [
@@ -17,28 +17,24 @@ const features = [
     name: 'Track everything from commander damage to poison counters',
     description:
       'Keep track of your life points, be it in a 1v1 game, commander game, anything. Talking about commander, keep track of that too! Add de commander damage on the respective enemy colors, and it will reduce de same amount from your life points. Does an opponent have partner commanders ? You can also keep track of that too. And those nasty poison counters ? Of course we have a spot to keep track of them too!',
-    icon: DevicePhoneMobileIcon,
     image: <StaticImage src="../images/screenshots/9-gameplay-4p-dmg.png" alt="" className="h-full w-full object-cover object-center" />
   },
   {
     name: 'Flip coins and roll dices',
     description:
       'Need to flip a coin or more for those sweet Krark, the Thumbless triggers ? We have you covered! Or How about rolling some dice quickly ? Be it form a D4 to a D20 ? We have all of them, never skip a beat looking for them, there are right here in your app!',
-    icon: RectangleGroupIcon,
     image: <StaticImage src="../images/screenshots/7-in-game-settings.png" alt="" className="h-full w-full object-cover object-center" />
   },
   {
     name: 'Search for cards, both in and out of games',
     description:
-      'Ever wanted to search about a card during a game to know about its rulings ? You can do that with the Split app! Or how about a quick place to open up, search a card to know about its different prints ? Or to check on prices ? From cardmarket to TCGplayer. Or see the legal formats a card is allow ? We have it all!',
-    icon: MagnifyingGlassIcon,
+      'Ever wanted to search about a card quickly ? Just open the app and at the bottom right from the start you can do that. Or how about during a game ? We have that too! See info about oracle text, in what formats a card is legal, prices on cardmarket or TCGplayer, and more important, see ruling information about the card, so you can clear up interactions during your games, all from one place!',
     image: <StaticImage src="../images/screenshots/6-search-in-game.jpg" alt="" className="h-full w-full object-cover object-center" />
   },
   {
     name: 'Track games up to 6 Players',
     description:
-      "Be it from a 1v1 game to a 6 player game, Split helps you keep track of all those games! And even with multiple designs for 4 players and up, so Split reprents accurately all your positions on the table. And be it 1v1 or 6 players, you can track always their commander damage, etc. Don't leave anyone out with Split!",
-    icon: BoltIcon,
+      "Be it from a 1v1 game to a 6 player game, Split helps you keep track of all those games! And even with multiple designs for 4 players and up, so Split reprents accurately all your positions on the table. And be it 1v1 or 6 players, you can track always their commander damage, poison counters, etc. Don't leave anyone out with Split!",
     image: <StaticImage src="../images/screenshots/8-gameplay-6p.png" alt="" className="h-full w-full object-cover object-center" />
   },
 ];
@@ -53,7 +49,7 @@ const HeroSection = () => {
               Split Counter
             </h1>
             <p className="mt-4 text-xl text-gray-500">
-              {"Track your games like never before. From your life total, to commander damage (both single or partner damage), to search about cards you and your enemies want to know rulings about."}
+              {"Track your games like never before. From your life total, to commander damage (both single or partner damage), to search about cards you and your opponents want to know rulings about."}
             </p>
           </div>
           <div>
