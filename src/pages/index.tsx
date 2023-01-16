@@ -227,14 +227,14 @@ const Footer = () => {
           <p>Track all yours games, the right way, with a complete tool.</p>
           <div className="sm:flex mx-10 sm:mx-0 justify-center my-10">
             <div className="flex items-center border w-auto rounded-lg px-4 py-2 mx-2">
-              <StaticImage src="https://cdn-icons-png.flaticon.com/512/888/888857.png" alt="" className="w-7 md:w-8" />
+              <StaticImage src="../images/play-store.png" alt="" className="w-7 md:w-8" />
               <div className="text-left ml-3">
                 <p className='text-xs text-gray-200'>Download on </p>
                 <p className="text-sm md:text-base"> Google Play Store </p>
               </div>
             </div>
-            <div className="flex items-center border w-auto mt-5 sm:mt-0 rounded-lg px-8 py-2 mx-2">
-              <StaticImage src="https://cdn-icons-png.flaticon.com/512/888/888841.png" alt="" className="w-7 md:w-8" />
+            <div className="flex items-center border w-auto rounded-lg px-4 py-2 mx-2 pr-14">
+              <StaticImage src="../images/apple-logo.png" alt="" className="w-7 md:w-8" />
               <div className="text-left ml-3">
                 <p className='text-xs text-gray-200'>Download on </p>
                 <p className="text-sm md:text-base"> Apple Store </p>
