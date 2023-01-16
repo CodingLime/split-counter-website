@@ -195,7 +195,7 @@ const CTA = () => {
           <span className="block text-white">Ready to start a game?</span>
           <span className="block text-split-yellow">Download the Split App now!</span>
         </h2>
-        <div className="mt-8 sm:flex lg:mt-0 lg:flex-shrink-0">
+        <div className="mt-8 sm:flex justify-center lg:mt-0 lg:flex-shrink-0">
           <div className="inline-flex rounded-md shadow">
             <a
               href="#"
@@ -225,15 +225,15 @@ const Footer = () => {
         <div className="text-center">
           <h3 className="text-3xl mb-3"> Download Split Counter App</h3>
           <p>Track all yours games, the right way, with a complete tool.</p>
-          <div className="flex justify-center my-10">
-            <div className="flex items-center border w-auto rounded-lg px-4 py-2  mx-2">
+          <div className="sm:flex mx-10 sm:mx-0 justify-center my-10">
+            <div className="flex items-center border w-auto rounded-lg px-4 py-2 mx-2">
               <StaticImage src="https://cdn-icons-png.flaticon.com/512/888/888857.png" alt="" className="w-7 md:w-8" />
               <div className="text-left ml-3">
                 <p className='text-xs text-gray-200'>Download on </p>
                 <p className="text-sm md:text-base"> Google Play Store </p>
               </div>
             </div>
-            <div className="flex items-center border w-auto rounded-lg px-4 py-2  mx-2">
+            <div className="flex items-center border w-auto mt-5 sm:mt-0 rounded-lg px-8 py-2 mx-2">
               <StaticImage src="https://cdn-icons-png.flaticon.com/512/888/888841.png" alt="" className="w-7 md:w-8" />
               <div className="text-left ml-3">
                 <p className='text-xs text-gray-200'>Download on </p>
