@@ -127,13 +127,13 @@ const HeroSection = () => {
                 href="#"
                 className="inline-block mt-2 mr-2 rounded-md border border-transparent bg-split-blue py-3 px-6 text-center font-medium text-white hover:bg-gray-700"
               >
-                Download Android
+                {'Download Android'}
               </a>
               <a
                 href="#"
-                className="inline-block mt-2 rounded-md border border-transparent bg-split-blue py-3 px-8 text-center font-medium text-white hover:bg-gray-700"
+                className="inline-block mt-2 rounded-md border border-transparent bg-split-blue py-3 px-10 text-center font-medium text-white hover:bg-gray-700"
               >
-                Download iOS
+                {'Download iOS' + ' '}
               </a>
             </div>
           </div>
@@ -195,21 +195,21 @@ const CTA = () => {
           <span className="block text-white">Ready to start a game?</span>
           <span className="block text-split-yellow">Download the Split App now!</span>
         </h2>
-        <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+        <div className="mt-8 sm:flex lg:mt-0 lg:flex-shrink-0">
           <div className="inline-flex rounded-md shadow">
             <a
               href="#"
-              className="inline-flex items-center justify-center rounded-md border border-transparent bg-split-yellow px-5 py-3 text-base font-medium text-white hover:bg-gray-700"
+              className="inline-block mt-2 mr-2 rounded-md border border-transparent bg-split-yellow py-3 px-6 text-center font-medium text-white hover:bg-gray-700"
             >
-              Download Android
+              {'Download Android'}
             </a>
           </div>
-          <div className="ml-3 inline-flex rounded-md shadow">
+          <div className="sm:ml-3 inline-flex rounded-md shadow">
             <a
               href="#"
-              className="inline-flex items-center justify-center rounded-md border border-transparent bg-split-yellow px-5 py-3 text-base font-medium text-white hover:bg-gray-700"
+              className="inline-block mt-2 rounded-md border border-transparent bg-split-yellow py-3 px-10 text-center font-medium text-white hover:bg-gray-700"
             >
-              Download iOS
+              {'Download iOS' + ' '}
             </a>
           </div>
         </div>
