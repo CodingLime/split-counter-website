@@ -8,7 +8,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Features', href: '/#features' },
-  { name: 'Download', href: '#' },
+  /* { name: 'Download', href: '#' }, */
   { name: 'Blog', href: '#' },
 ];
 
@@ -171,7 +171,7 @@ const FeatureSection = () => {
                   <feature.icon className="h-8 w-8" aria-hidden="true" />
                 </div> */}
                 {/* {feature.image} */}
-                <div className="h-96 w-44 overflow-hidden rounded-lg mt-0 sm:mt-0 lg:mt-0 lg:opacity-100">
+                <div className="h-96 w-44 overflow-hidden rounded-lg mt-0 mx-auto sm:mt-0 md:mx-auto lg:mt-0 lg:opacity-100">
                   {feature.image}
                 </div>
                 <div className="sm:min-w-0 sm:flex-1">
