@@ -1,9 +1,8 @@
-import * as React from "react";
+import React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import { useState, useCallback } from 'react';
-import { Dialog } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { StaticImage } from 'gatsby-plugin-image';
+import NavBar from "../components/navbar";
+import Footer from "../components/footer";
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -37,75 +36,6 @@ const features = [
     image: <StaticImage src="../images/screenshots/8-gameplay-6p.png" alt="" className="h-full w-full object-cover object-center" />
   },
 ];
-
-const NavBar = ({ mobileMenuOpen, setMobileMenuOpen }: { mobileMenuOpen: boolean; setMobileMenuOpen: Function; }) => {
-  return (
-    <div>
-      <nav className="flex mx-8 sm:mx-10 h-20 items-center justify-between" aria-label="Global">
-        <div className="flex lg:min-w-0 lg:flex-initial" aria-label="Global">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Split Counter App</span>
-            <StaticImage className="w-24" src="../images/icon-no-bg.png" alt="Slip counter app logo" />
-          </a>
-        </div>
-        <div className="flex sm:hidden lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="hidden sm:flex sm:flex-auto sm:gap-x-12 lg:flex ml-16 sm:ml-8 lg:min-w-0 lg:flex-auto lg:justify-start lg:gap-x-12">
-          {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="font-semibold text-lg text-gray-900 hover:text-gray-900">
-              {item.name}
-            </a>
-          ))}
-        </div>
-      </nav>
-      <Dialog as="div" open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)}>
-        <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 sm:hidden lg:hidden">
-          <div className="flex mx-10 h-20 items-center justify-between">
-            <div className="flex">
-              <a href="#" className="-m-1.5 -ml-9 mt-11 p-1.5">
-                <span className="sr-only">Split Counter App</span>
-                <StaticImage className="w-24" src="../images/icon-no-bg.png" alt="Slip counter app logo" />
-              </a>
-            </div>
-            <div className="flex">
-              <button
-                type="button"
-                className=" mt-11 ml-56 inline-flex items-center justify-center rounded-md p-5 text-gray-700"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <span className="sr-only">Close menu</span>
-                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-              </button>
-            </div>
-          </div>
-          <div className="mt-20 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6 mx-10">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="-mx-1 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Dialog.Panel>
-      </Dialog>
-    </div>
-  );
-};
 
 const HeroSection = () => {
   return (
@@ -286,56 +216,11 @@ const CTA = () => {
   );
 };
 
-const Footer = () => {
-  return (
-    <div className="bg-gray-900">
-      <div className="max-w-2xl mx-auto text-white py-10">
-        <div className="text-center">
-          <h3 className="text-3xl mb-3"> Download Split Counter App</h3>
-          <p>Track all yours games, the right way, with a complete tool.</p>
-          <div className="sm:flex mx-10 sm:mx-0 justify-center my-10">
-            <div className="flex items-center border w-auto rounded-lg px-4 py-2 mx-2">
-              <StaticImage src="../images/play-store.png" alt="" className="w-7 md:w-8" />
-              <div className="text-left ml-3">
-                <p className='text-xs text-gray-200'>Download on </p>
-                <p className="text-sm md:text-base"> Google Play Store </p>
-              </div>
-            </div>
-            <div className="flex items-center border w-auto rounded-lg px-4 py-2 mx-2 pr-14 mt-6 sm:mt-0">
-              <StaticImage src="../images/apple-logo.png" alt="" className="w-7 md:w-8" />
-              <div className="text-left ml-3">
-                <p className='text-xs text-gray-200'>Download on </p>
-                <p className="text-sm md:text-base"> Apple Store </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="mt-14 flex flex-col md:flex-row md:justify-between items-center text-sm text-white">
-          <p className="order-2 md:order-1 mt-8 md:mt-0"> &copy; Split Counter App, 2022. </p>
-          <div className="order-1 md:order-2">
-            <span className="px-2">About us</span>
-            <span className="px-2 border-l">Contact us</span>
-            <span className="px-2 border-l">Privacy Policy</span>
-            <span className="px-2 border-l">Terms of Service</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const IndexPage: React.FC<PageProps> = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const mobileMenuOpenHandler = useCallback((value: boolean) => {
-    setMobileMenuOpen(value);
-  }, [setMobileMenuOpen]);
 
   return (
     <div className="isolate bg-white">
-      <nav className="pt-12 mx-auto max-w-7xl">
-        <NavBar mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={mobileMenuOpenHandler} />
-      </nav>
+      <NavBar />
       <main className="p-5 sm:p-10 lg:p-20">
         <HeroSection />
         <FeatureSection />
