@@ -7,9 +7,7 @@ const PrivacyPolicy: React.FC<PageProps> = () => {
 
     return (
         <div className="isolate bg-white">
-            <nav className="pt-12 mx-auto max-w-7xl">
-                <NavBar />
-            </nav>
+            <NavBar />
             <main className="p-5 sm:p-10 lg:p-20">
 
             </main>
