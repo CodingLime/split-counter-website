@@ -19,7 +19,6 @@ const TermsAndConditions: React.FC<PageProps<BlogData>> = ({ data }) => {
     <div className="isolate bg-white">
       <NavBar />
       <main className="flex mx-auto max-w-5xl content-center justify-center items-center p-5 sm:p-10 lg:p-20">
-        {/* <PrivacyPolicyText /> */}
         {
           data.allMdx.nodes.map((node) => {
             return (
