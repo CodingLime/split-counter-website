@@ -20,7 +20,7 @@ const NavBar = () => {
                 <div>
                     <nav className="flex mx-8 sm:mx-10 h-20 items-center justify-between" aria-label="Global">
                         <div className="flex lg:min-w-0 lg:flex-initial" aria-label="Global">
-                            <a href="#" className="-m-1.5 p-1.5">
+                            <a href="/" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Split Counter App</span>
                                 <StaticImage className="w-24" src="../images/icon-no-bg.png" alt="Slip counter app logo" />
                             </a>

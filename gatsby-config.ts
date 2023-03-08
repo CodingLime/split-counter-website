@@ -20,6 +20,15 @@ const config: GatsbyConfig = {
         icon: 'src/images/icon.png',
       },
     },
+    `gatsby-plugin-mdx`,
+     {
+       resolve: `gatsby-source-filesystem`,
+       options: {
+         name: `content`,
+         path: `${__dirname}/src/content`,
+       },
+     },
+     `gatsby-transformer-remark`,
   ],
 };
 

@@ -41,7 +41,7 @@ const Footer = () => {
                             <span className="px-2">About us</span>
                             <span className="px-2 border-l">Contact us</span>
                             <Link to={"/privacy-policy"}><span className="px-2 border-l">Privacy Policy</span></Link>
-                            <Link to={"terms-of-service"}><span className="px-2 border-l">Terms of Service</span></Link>
+                            <Link to={"/terms-and-conditions"}><span className="px-2 border-l">Terms & Conditions</span></Link>
                         </div>
                     </div>
                     <div className="mt-14 flex flex-col md:flex-row md:justify-between items-center text-sm text-white">
