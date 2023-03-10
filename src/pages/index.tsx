@@ -122,13 +122,15 @@ const HeroSection = () => {
               </div>
 
               <a
-                href="#"
+                target="_blank"
+                href="https://play.google.com/store/apps/details?id=app.splitcounter"
                 className="inline-block mt-2 mr-2 rounded-md border border-transparent bg-split-blue py-3 px-6 text-center font-medium text-white hover:bg-gray-700"
               >
                 {'Download Android'}
               </a>
               <a
-                href="#"
+                target="_blank"
+                href="https://apps.apple.com/us/app/split-counter-mtg-utility/id6446151892"
                 className="inline-block mt-2 rounded-md border border-transparent bg-split-blue py-3 px-10 text-center font-medium text-white hover:bg-gray-700"
               >
                 {'Download iOS' + ' '}
@@ -196,7 +198,8 @@ const CTA = () => {
         <div className="mt-8 sm:flex justify-center lg:mt-0 lg:flex-shrink-0">
           <div className="inline-flex rounded-md shadow">
             <a
-              href="#"
+              target="_blank"
+              href="https://play.google.com/store/apps/details?id=app.splitcounter"
               className="inline-block mt-2 mr-2 rounded-md border border-transparent bg-split-yellow py-3 px-6 text-center font-medium text-white hover:bg-gray-700"
             >
               {'Download Android'}
@@ -204,7 +207,8 @@ const CTA = () => {
           </div>
           <div className="sm:ml-3 inline-flex rounded-md shadow">
             <a
-              href="#"
+              target="_blank"
+              href="https://apps.apple.com/us/app/split-counter-mtg-utility/id6446151892"
               className="inline-block mt-2 rounded-md border border-transparent bg-split-yellow py-3 px-10 text-center font-medium text-white hover:bg-gray-700"
             >
               {'Download iOS' + ' '}

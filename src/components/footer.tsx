@@ -19,20 +19,20 @@ const Footer = () => {
                         <h3 className="text-3xl mb-3"> Download Split Counter App</h3>
                         <p>Track all yours games, the right way, with a complete tool.</p>
                         <div className="sm:flex mx-10 sm:mx-0 justify-center my-10">
-                            <div className="flex items-center border w-auto rounded-lg px-4 py-2 mx-2">
+                            <a href="https://play.google.com/store/apps/details?id=app.splitcounter" target="_blank" className="flex items-center border w-auto rounded-lg px-4 py-2 mx-2">
                                 <StaticImage src="../images/play-store.png" alt="" className="w-7 md:w-8" />
                                 <div className="text-left ml-3">
                                     <p className='text-xs text-gray-200'>Download on </p>
                                     <p className="text-sm md:text-base"> Google Play Store </p>
                                 </div>
-                            </div>
-                            <div className="flex items-center border w-auto rounded-lg px-4 py-2 mx-2 pr-14 mt-6 sm:mt-0">
+                            </a>
+                            <a href="https://apps.apple.com/us/app/split-counter-mtg-utility/id6446151892" target="_blank" className="flex items-center border w-auto rounded-lg px-4 py-2 mx-2 pr-14 mt-6 sm:mt-0">
                                 <StaticImage src="../images/apple-logo.png" alt="" className="w-7 md:w-8" />
                                 <div className="text-left ml-3">
                                     <p className='text-xs text-gray-200'>Download on </p>
                                     <p className="text-sm md:text-base"> Apple Store </p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div className="mt-14 flex flex-col md:flex-row md:justify-between items-center text-sm text-white">
