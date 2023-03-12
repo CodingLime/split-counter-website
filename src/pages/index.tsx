@@ -200,7 +200,7 @@ const CTA = () => {
             <a
               target="_blank"
               href="https://play.google.com/store/apps/details?id=app.splitcounter"
-              className="inline-block mt-2 mr-2 rounded-md border border-transparent bg-split-yellow py-3 px-6 text-center font-medium text-white hover:bg-gray-700"
+              className="inline-block mt-2 mr-2 rounded-md border border-transparent bg-split-yellow py-3 px-6 text-center font-medium text-black hover:bg-gray-200"
             >
               {'Download Android'}
             </a>
@@ -209,7 +209,7 @@ const CTA = () => {
             <a
               target="_blank"
               href="https://apps.apple.com/us/app/split-counter-mtg-utility/id6446151892"
-              className="inline-block mt-2 rounded-md border border-transparent bg-split-yellow py-3 px-10 text-center font-medium text-white hover:bg-gray-700"
+              className="inline-block mt-2 rounded-md border border-transparent bg-split-yellow py-3 px-10 text-center font-medium text-black hover:bg-gray-300"
             >
               {'Download iOS' + ' '}
             </a>
