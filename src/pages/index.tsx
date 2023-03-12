@@ -243,7 +243,12 @@ export const Head: HeadFC = () => {
   return (
     <>
       <html lang="en" />
+      <meta name="description" content={`Track your games like never before. From your life total, to commander damage (partners included!), to search about cards you want to know prices or rulings.`} />
       <title>Split Counter App</title>
     </>
   );
+};
+
+export const onRenderBody = ({ setHtmlAttributes }: any) => {
+  setHtmlAttributes({ lang: "en" });
 };
