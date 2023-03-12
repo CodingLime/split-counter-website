@@ -239,4 +239,11 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Split Counter App</title>;
+export const Head: HeadFC = () => {
+  return (
+    <>
+      <html lang="en" />
+      <title>Split Counter App</title>
+    </>
+  );
+};
