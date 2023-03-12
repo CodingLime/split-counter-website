@@ -2,8 +2,9 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Split Counter Website`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Split Counter App - MTG Utility`,
+    siteUrl: `https://www.splitcounter.app/`,
+    description: `Track your games like never before. From your life total, to commander damage (partners included!), to search about cards you want to know prices or rulings.`
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin

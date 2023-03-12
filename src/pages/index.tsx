@@ -47,7 +47,7 @@ const HeroSection = () => {
               Split Counter
             </h1>
             <p className="mt-4 text-xl text-gray-500">
-              {"Track your games like never before. From your life total, to commander damage (both single or partner damage), to search about cards you and your opponents want to know rulings about."}
+              {"Track your games like never before. From your life total, to commander damage (partners included!), to search about cards you want to know prices or rulings."}
             </p>
           </div>
           <div>
