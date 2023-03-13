@@ -3,12 +3,6 @@ import type { HeadFC } from "gatsby";
 import { Link } from "gatsby";
 import { StaticImage } from 'gatsby-plugin-image';
 
-const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Features', href: '/#features' },
-    { name: 'Blog', href: '#' },
-];
-
 const Footer = () => {
 
     return (

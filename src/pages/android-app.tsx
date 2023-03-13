@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import type { HeadFC, PageProps } from "gatsby";
-import { useNavigate } from "react-router-dom";
+import type { PageProps } from "gatsby";
 
 const iOSAPP: React.FC<PageProps> = () => {
     /* const navigate = useNavigate(); */

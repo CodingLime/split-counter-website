@@ -1,6 +1,6 @@
 import * as React from "react";
-import type { HeadFC, PageProps } from "gatsby";
-import { useState, useCallback } from 'react';
+import type { HeadFC } from "gatsby";
+import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { StaticImage } from 'gatsby-plugin-image';

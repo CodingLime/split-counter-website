@@ -4,12 +4,6 @@ import { StaticImage } from 'gatsby-plugin-image';
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
 
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Features', href: '/#features' },
-  { name: 'Blog', href: '#' },
-];
-
 const features = [
   {
     name: 'Track everything from commander damage to poison counters',

@@ -3,7 +3,6 @@ import { graphql, PageProps, HeadFC } from 'gatsby';
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
 import { MDXProvider } from "@mdx-js/react";
-//import PrivacyPolicyText from "../content/privacy-policy.mdx";
 
 type BlogNode = {
     body: string;
