@@ -8,7 +8,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Features', href: '/#features' },
-    { name: 'Blog', href: '#' },
+    /* { name: 'Blog', href: '#' }, */
 ];
 
 const NavBar = () => {
