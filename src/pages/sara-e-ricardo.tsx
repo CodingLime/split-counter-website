@@ -10,6 +10,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Card, CardContent } from "../components/ui/card";
 import mainGIF from "../images/sara-e-ricardo/Save-the-Date-Sara-e-Ricardo.gif";
+import main2GIF from "../images/sara-e-ricardo/2GIF.gif";
 
 const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
     // Location data for mapping
@@ -50,16 +51,13 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
 
                     {/* Center content - GIF */}
                     <div className="w-full flex-grow flex items-center justify-center">
-                        <div className="w-full overflow-hidden" style={{ height: "100%" }}>
+                        {/* This div will constrain the actual dimensions */}
+                        <div className="w-80 h-80 md:w-80 md:h-80 flex items-center justify-center">
                             <img
-                                className="w-full object-cover"
+                                className="max-h-full max-w-full object-contain"
                                 alt="Save the date sara e ricardo"
-                                src={mainGIF}
-                                style={{
-                                    marginTop: "-15px", /* Adjust this value as needed */
-                                    marginBottom: "-15px", /* Adjust this value as needed */
-                                    height: "calc(100% + 2px)", /* Compensate for the negative margins */
-                                }}
+                                src={main2GIF}
+                                style={{ width: 'auto', height: 'auto' }} // Override any conflicting styles
                             />
                         </div>
                     </div>
@@ -162,23 +160,25 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                         </div>
                     </div>
 
-                    {/* <StaticImage
-                        className="w-full max-w-[858px] -top-10 h-48 mx-auto mb-8"
-                        alt="Vector"
-                        src="../images/sara-e-ricardo/vector.svg"
-                    /> */}
+                    {/* SVG container with overflow allowed */}
+                    <div className="relative px-8 pb-8 overflow-visible">
+                        {/* SVG background zoomed in and with overflow */}
+                        <div className="absolute left-0 right-0 top-0 transform -translate-y-10 flex justify-center overflow-visible">
+                            <div className="w-full max-w-[858px] h-48 overflow-visible scale-105 origin-top">
+                                <StaticImage
+                                    className="w-full h-full z-0"
+                                    alt="Vector"
+                                    src="../images/sara-e-ricardo/vector.svg"
+                                    objectFit="cover"
+                                />
+                            </div>
+                        </div>
 
-                    {/* <div className="flex flex-col items-center gap-4 px-8"> */}
-                    <div className="relative flex flex-col items-center gap-4 px-8">
-                        <StaticImage
-                            className="absolute w-full max-w-[858px] -top-10 h-48 mx-auto mb-8 z-0"
-                            alt="Vector"
-                            src="../images/sara-e-ricardo/vector.svg"
-                        />
-                        <div className="relative z-10 flex flex-col items-center gap-4">
+                        {/* Cards container */}
+                        <div className="relative z-10 flex flex-col items-center gap-4 pt-8">
                             <Card
                                 key={0}
-                                className="flex flex-col w-[248px] h-[280px] bg-white rounded-lg shadow-lg relative" //-top-52
+                                className="flex flex-col w-[248px] h-[280px] bg-white rounded-lg shadow-lg relative"
                             >
                                 <CardContent className="p-0 flex flex-col items-center">
                                     <StaticImage
