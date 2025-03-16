@@ -55,7 +55,7 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                 />
 
                 <p className="w-[284px] font-['AppleGothic-Regular',Helvetica] font-normal text-neutral-50 text-lg text-center tracking-[-0.36px] leading-[27px] mb-8">
-                    Estamos a dar o nó e queremos que venhas celebrar conosco este momento
+                    Estamos a dar o nó e queremos que venhas celebrar connosco este momento
                     tão especial
                 </p>
 
