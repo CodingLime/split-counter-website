@@ -16,20 +16,36 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sharp",
     `gatsby-transformer-sharp`,
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Barrio\:400`, // Load Barrio font
+        ],
+        display: "swap",
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: 'src/images/icon.png',
       },
     },
     `gatsby-plugin-mdx`,
-     {
-       resolve: `gatsby-source-filesystem`,
-       options: {
-         name: `content`,
-         path: `${__dirname}/src/content`,
-       },
-     },
-     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`, // Adjust this path if needed
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
 };
 
