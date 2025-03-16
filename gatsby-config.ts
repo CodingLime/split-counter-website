@@ -20,6 +20,7 @@ const config: GatsbyConfig = {
       options: {
         fonts: [
           `Barrio\:400`, // Load Barrio font
+          `Montserrat\:400,700` // Montserrat font (Regular 400 & Bold 700)
         ],
         display: "swap",
       },

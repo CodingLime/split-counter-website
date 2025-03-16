@@ -44,7 +44,7 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                     src="../images/sara-e-ricardo/group-6-svg.svg"
                 />
 
-                <h1 className="w-[329px] font-['Montserrat',Helvetica] font-normal text-neutral-50 text-2xl tracking-[-0.48px] leading-9 text-center mb-4">
+                <h1 className="w-[329px] font-montserrat font-normal text-neutral-50 text-2xl tracking-[-0.48px] leading-9 text-center mb-4">
                     Sara e Ricardo
                 </h1>
 
@@ -97,13 +97,13 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                 {/* Background decorations */}
                 <div className="absolute w-full h-full top-12 left-0 z-0 overflow-hidden">
                     <StaticImage
-                        className="absolute w-[751px] h-[184px] top-[500px] left-[0px]"
+                        className="absolute w-[751px] h-[184px] top-[500px] left-[-150px]"
                         alt="Vector"
                         src="../images/sara-e-ricardo/vector-rose.svg"
                     />
 
                     <StaticImage
-                        className="absolute w-[924px] h-[207px] top-[191px] left-[0px]"
+                        className="absolute w-[924px] h-[207px] top-[191px] left-[-150px]"
                         alt="Vector"
                         src="../images/sara-e-ricardo/vector-rose.svg"
                     />
@@ -125,10 +125,10 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                                     href={location.googleMapLink}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="block w-full max-w-[358px] cursor-pointer"
+                                    className="block w-full max-w-[378px] cursor-pointer"
                                 >
                                     <Card
-                                        className={`flex w-full max-w-[358px] h-52 items-end gap-2.5 p-5 rounded-lg ${location.borderWidth} border-white overflow-hidden relative hover:opacity-90 transition-opacity`}
+                                        className={`flex w-full max-w-[378px] h-52 items-end gap-2.5 p-5 rounded-lg ${location.borderWidth} border-white overflow-hidden relative hover:opacity-90 transition-opacity`}
                                     >
                                         {/* Check if image exists before rendering */}
                                         {location.image && (
@@ -155,7 +155,7 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                                                     alt="Icon location"
                                                     src="../images/sara-e-ricardo/icon-location.svg"
                                                 />
-                                                <div className="font-p1-medium text-white">
+                                                <div className="font-montserrat font-p1-medium text-white">
                                                     {location.name}
                                                 </div>
                                             </div>
@@ -171,8 +171,8 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
             {/* Confirmation Section */}
             <section className="flex flex-col items-center bg-[#A1B89B] py-16 px-8 relative overflow-hidden">
                 <div className="flex flex-col items-center w-full mb-8">
-                    <p className="w-full text-[#6f7a6a] text-base text-center leading-6 font-['Montserrat',Helvetica]">
-                        Agradecemos a vossa confirmação até:
+                    <p className="w-full text-[#6f7a6a] text-base text-center leading-6 font-montserrat">
+                        Agradecemos a vossa confirmação até
                         <br />
                         <span className="font-semibold">30 de abril de 2025</span>
                     </p>
@@ -181,7 +181,7 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                 {/* Background decorations */}
                 <div className="absolute w-full h-full top-12 left-0 z-0 overflow-hidden">
                     <StaticImage
-                        className="absolute w-[731px] h-[164px] top-[100px] left-[0px]"
+                        className="absolute w-[731px] h-[164px] top-[100px] left-[-150px]"
                         alt="Vector"
                         src="../images/sara-e-ricardo/vector.svg"
                     />
