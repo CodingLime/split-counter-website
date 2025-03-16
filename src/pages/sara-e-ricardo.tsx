@@ -65,7 +65,7 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                     {/* Bottom content */}
                     <div className="flex flex-col items-center w-full pb-10">
                         <div className="flex justify-center font-['AppleGothic-Regular'] text-white text-2xl tracking-[-0.48px] leading-8 text-center mb-6">
-                            Estamos a dar o nó e queremos que venhas celebrar conosco este momento
+                            Estamos a dar o nó e queremos que venhas celebrar connosco este momento
                             tão especial
                         </div>
 
