@@ -97,13 +97,13 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                 {/* Background decorations */}
                 <div className="absolute w-full h-full top-12 left-0 z-0 overflow-hidden">
                     <StaticImage
-                        className="absolute w-[751px] h-[184px] top-[500px] left-[50px]"
+                        className="absolute w-[751px] h-[184px] top-[500px] left-[0px]"
                         alt="Vector"
                         src="../images/sara-e-ricardo/vector-rose.svg"
                     />
 
                     <StaticImage
-                        className="absolute w-[924px] h-[207px] top-[191px] left-[-150px]"
+                        className="absolute w-[924px] h-[207px] top-[191px] left-[0px]"
                         alt="Vector"
                         src="../images/sara-e-ricardo/vector-rose.svg"
                     />
@@ -181,7 +181,7 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                 {/* Background decorations */}
                 <div className="absolute w-full h-full top-12 left-0 z-0 overflow-hidden">
                     <StaticImage
-                        className="absolute w-[731px] h-[164px] top-[100px] left-[50px]"
+                        className="absolute w-[731px] h-[164px] top-[100px] left-[0px]"
                         alt="Vector"
                         src="../images/sara-e-ricardo/vector.svg"
                     />
