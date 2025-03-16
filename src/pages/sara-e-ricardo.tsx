@@ -86,7 +86,7 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                     />
                 </div>
 
-                <div className="font-['Montserrat',Helvetica] font-bold text-white text-xl text-center tracking-[2.00px] leading-6">
+                <div className="font-['Montserrat',Helvetica] font-normal text-white text-xl text-center tracking-[2.00px] leading-6">
                     14H <br />
                     28 DE JUNHO DE 2025
                 </div>
