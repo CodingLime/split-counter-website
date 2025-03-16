@@ -48,11 +48,14 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                     Sara e Ricardo
                 </h1>
 
-                <StaticImage
-                    className="w-[309px] h-[336px] mb-6"
-                    alt="Save the date Sara e Ricardo"
-                    src="../images/sara-e-ricardo/save-the-date-sara-e-ricardo-1.png"
-                />
+                <div className="w-96 h-96 md:w-80 md:h-80 flex items-center justify-center mb-6">
+                    <img
+                        className="max-h-full max-w-full object-contain"
+                        alt="Save the date sara e ricardo"
+                        src={main2GIF}
+                        style={{ width: 'auto', height: 'auto' }} // Override any conflicting styles
+                    />
+                </div>
 
                 <p className="w-[284px] font-['AppleGothic-Regular',Helvetica] font-normal text-neutral-50 text-lg text-center tracking-[-0.36px] leading-[27px] mb-8">
                     Estamos a dar o nó e queremos que venhas celebrar connosco este momento
