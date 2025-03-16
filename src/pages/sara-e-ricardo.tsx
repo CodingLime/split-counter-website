@@ -41,7 +41,7 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                 <StaticImage
                     className="w-[86px] h-[54px] mb-2"
                     alt="Wedding logo"
-                    src="../images/sara-e-ricardo/group-6.png"
+                    src="../images/sara-e-ricardo/group-6-svg.svg"
                 />
 
                 <h1 className="w-[329px] font-['Montserrat',Helvetica] font-normal text-neutral-50 text-2xl tracking-[-0.48px] leading-9 text-center mb-4">
