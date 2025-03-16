@@ -40,11 +40,11 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                 {/* Hero Section */}
                 <div className="flex flex-col items-center px-8 min-h-screen flex-shrink-0 justify-between">
                     {/* Top content */}
-                    <div className="flex flex-col items-center w-full pt-10">
-                        <div className="flex justify-center font-['Barrio'] text-white text-[32px] tracking-[-0.64px] leading-[48px] mb-8">
+                    <div className="flex flex-col items-center w-full pt-8">
+                        <div className="flex justify-center font-['Barrio'] text-white text-[32px] tracking-[-0.64px] leading-[48px] mb-4">
                             SR
                         </div>
-                        <div className="flex justify-center font-['Barrio'] text-white text-[32px] tracking-[-0.64px] leading-[48px] mb-8">
+                        <div className="flex justify-center font-['Barrio'] text-white text-[32px] tracking-[-0.64px] leading-[48px] mb-2">
                             Sara e Ricardo
                         </div>
                     </div>
@@ -52,7 +52,7 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                     {/* Center content - GIF */}
                     <div className="w-full flex-grow flex items-center justify-center">
                         {/* This div will constrain the actual dimensions */}
-                        <div className="w-80 h-80 md:w-80 md:h-80 flex items-center justify-center">
+                        <div className="w-96 h-96 md:w-80 md:h-80 flex items-center justify-center">
                             <img
                                 className="max-h-full max-w-full object-contain"
                                 alt="Save the date sara e ricardo"
@@ -63,8 +63,8 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                     </div>
 
                     {/* Bottom content */}
-                    <div className="flex flex-col items-center w-full pb-12">
-                        <div className="flex justify-center font-['AppleGothic-Regular'] text-white text-2xl tracking-[-0.48px] leading-9 text-center mb-12">
+                    <div className="flex flex-col items-center w-full pb-10">
+                        <div className="flex justify-center font-['AppleGothic-Regular'] text-white text-2xl tracking-[-0.48px] leading-8 text-center mb-6">
                             Estamos a dar o nó e queremos que venhas celebrar conosco este momento
                             tão especial
                         </div>
