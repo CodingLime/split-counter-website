@@ -95,18 +95,30 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
             {/* Where Section */}
             <section className="flex flex-col items-center bg-white py-12 px-4 relative overflow-hidden">
                 {/* Background decorations */}
-                <div className="absolute w-full h-full top-12 left-0 z-0 overflow-hidden">
-                    <StaticImage
-                        className="absolute w-[751px] h-[184px] top-[500px] left-[-150px]"
-                        alt="Vector"
-                        src="../images/sara-e-ricardo/vector-rose.svg"
-                    />
+                <div className="absolute w-full h-full top-12 left-0 z-0 overflow-hidden flex flex-col items-center">
+                    <div className="absolute w-[751px] h-[184px] top-[500px] ml-40"
+                        style={{
+                            maskImage: 'linear-gradient(to right, transparent, black 25%, black 65%, transparent)',
+                            WebkitMaskImage: 'linear-gradient(to right, transparent, black 25%, black 65%, transparent)'
+                        }}>
+                        <StaticImage
+                            className="w-full h-full"
+                            alt="Vector"
+                            src="../images/sara-e-ricardo/vector-rose.svg"
+                        />
+                    </div>
 
-                    <StaticImage
-                        className="absolute w-[924px] h-[207px] top-[191px] left-[-150px]"
-                        alt="Vector"
-                        src="../images/sara-e-ricardo/vector-rose.svg"
-                    />
+                    <div className="absolute w-[924px] h-[207px] top-[191px] -ml-40 -mt-3"
+                        style={{
+                            maskImage: 'linear-gradient(to right, transparent, black 45%, black 75%, transparent)',
+                            WebkitMaskImage: 'linear-gradient(to right, transparent, black 45%, black 75%, transparent)'
+                        }}>
+                        <StaticImage
+                            className="w-full h-full"
+                            alt="Vector"
+                            src="../images/sara-e-ricardo/vector-rose.svg"
+                        />
+                    </div>
                 </div>
 
                 {/* Content */}
@@ -179,12 +191,23 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                 </div>
 
                 {/* Background decorations */}
-                <div className="absolute w-full h-full top-12 left-0 z-0 overflow-hidden">
-                    <StaticImage
-                        className="absolute w-[731px] h-[164px] top-[100px] left-[-150px]"
+                <div className="absolute w-full h-full top-12 left-0 z-0 overflow-hidden flex flex-col items-center">
+                    {/* <StaticImage
+                        className="absolute w-[731px] h-[164px] top-[100px] ml-10 transform -translate-x-0"
                         alt="Vector"
                         src="../images/sara-e-ricardo/vector.svg"
-                    />
+                    /> */}
+                    <div className="absolute w-[731px] h-[164px] top-[100px] ml-10"
+                        style={{
+                            maskImage: 'linear-gradient(to right, transparent, black 45%, black 75%, transparent)',
+                            WebkitMaskImage: 'linear-gradient(to right, transparent, black 45%, black 75%, transparent)'
+                        }}>
+                        <StaticImage
+                            className="w-full h-full"
+                            alt="Vector"
+                            src="../images/sara-e-ricardo/vector.svg"
+                        />
+                    </div>
                 </div>
 
                 {/* Cards container */}
