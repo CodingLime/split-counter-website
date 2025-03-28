@@ -1,0 +1,12 @@
+{
+    "placeCeremony": "CEREMONY",
+    "placeParty": "PARTY",
+    "couplesNames": "Sara and Ricardo",
+    "couplesMessage" : "We are tying the knot and we want you to come celebrate this special moment with us",
+    "whenText": "when?",
+    "whenHours": "14H",
+    "whenDate": "JUNE 28, 2025",
+    "whereText": "where?",
+    "whereConfirmationText": "Please confirm your presence by",
+    "whereConfirmationDate": "APRIL 30, 2025"
+}

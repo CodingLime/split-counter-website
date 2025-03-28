@@ -46,7 +46,40 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/images`, // Adjust this path if needed
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/locales`,
+        name: `locale`
+      }
+    },
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`,
+        languages: [`pt`, `en`],  // Make sure 'pt' comes first
+        defaultLanguage: `en`,  // Set Portuguese as the default
+        siteUrl: `https://splitcounter.app/`,
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false,
+          },
+          detection: {
+            order: ['navigator', 'htmlTag', 'path', 'subdomain'], // Check browser settings first
+            caches: ['localStorage'], // Remember user’s choice
+          },
+        },
+        pages: [
+          {
+            matchPath: "/:lang?/sara-e-ricardo/",
+            languages: ["pt", "en"],  // Ensure both languages are available
+          },
+        ],
+        translationPath: `${__dirname}/src/locales`, // Ensure translation files are loaded
+        defaultNS: "common", // Default namespace (should match JSON filenames)
+      },
+    },
   ],
 };
 

@@ -1,35 +1,44 @@
-import {
-    FacebookIcon,
-    InstagramIcon,
-    ArrowDown,
-    ArrowBigDown,
-    TwitterIcon,
-} from "lucide-react";
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { useTranslation } from "gatsby-plugin-react-i18next";
+import { graphql } from 'gatsby';
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Card, CardContent } from "../components/ui/card";
-import mainGIF from "../images/sara-e-ricardo/Save-the-Date-Sara-e-Ricardo.gif";
 import main2GIF from "../images/sara-e-ricardo/2GIF.gif";
 
 const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
+    const { t } = useTranslation("common");
+    //console.log("Current Language:", language);
+    console.log("Translation Output:", t("couplesNames"));
+
+
     // Location data for mapping
     const locations = [
         {
-            title: "CERIMÓNIA",
+            title: t("placeCeremony"),
             name: "Santuário da Nª Senhora do Castelo",
             image: getImage(data.ceremonyImage), // from GraphQL query
             borderWidth: "border-8",
             googleMapLink: "https://maps.app.goo.gl/5bwnTnFPrN6bKB139"
         },
         {
-            title: "PARTY",
+            title: t("placeParty"),
             name: "Quinta da Cerca",
             image: getImage(data.partyImage), // from GraphQL query
             borderWidth: "border-[10px]",
             googleMapLink: "https://maps.app.goo.gl/ZVxBEypk82Qhi5Jr5"
         },
     ];
+
+    const pageTexts = {
+        "couplesNames": t("couplesNames"),
+        "couplesMessage": t("couplesMessage"),
+        "whenText": t("whenText"),
+        "whenHours": t("whenHours"),
+        "whenDate": t("whenDate"),
+        "whereText": t("whereText"),
+        "whereConfirmationText": t("whereConfirmationText"),
+        "whereConfirmationDate": t("whereConfirmationDate"),
+    }
 
     // Footer links
     const footerLinks = ["About us", "Terms of Service", "Privacy Policy", "FAQ"];
@@ -45,7 +54,7 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                 />
 
                 <h1 className="w-[329px] font-montserrat font-normal text-neutral-50 text-2xl tracking-[-0.48px] leading-9 text-center mb-4">
-                    Sara e Ricardo
+                    {pageTexts.couplesNames}
                 </h1>
 
                 <div className="w-96 h-96 md:w-80 md:h-80 flex items-center justify-center mb-6">
@@ -58,8 +67,7 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                 </div>
 
                 <p className="w-[284px] font-['AppleGothic-Regular',Helvetica] font-normal text-neutral-50 text-lg text-center tracking-[-0.36px] leading-[27px] mb-8">
-                    Estamos a dar o nó e queremos que venhas celebrar connosco este momento
-                    tão especial
+                    {pageTexts.couplesMessage}
                 </p>
 
                 {/* Scroll Indicator */}
@@ -75,7 +83,7 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
             {/* When Section */}
             <section className="flex flex-col items-center pt-24 pb-24">
                 <h2 className="font-['Montserrat',Helvetica] font-normal text-white text-[32px] text-center tracking-[-0.64px] leading-10 mb-12">
-                    quando?
+                    {pageTexts.whenText}
                 </h2>
 
                 <div className="w-56 h-[150px] mb-8">
@@ -86,9 +94,13 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                     />
                 </div>
 
-                <div className="font-['Montserrat',Helvetica] font-normal text-white text-xl text-center tracking-[2.00px] leading-6">
-                    14H <br />
-                    28 DE JUNHO DE 2025
+                <div className="flex flex-col intems-center">
+                    <div className="font-['Montserrat',Helvetica] font-normal text-white text-xl text-center tracking-[2.00px] leading-6">
+                        {pageTexts.whenHours}
+                    </div>
+                    <div className="font-['Montserrat',Helvetica] font-normal text-white text-xl text-center tracking-[2.00px] leading-6">
+                        {pageTexts.whenDate}
+                    </div>
                 </div>
             </section>
 
@@ -124,7 +136,7 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
                 {/* Content */}
                 <div className="flex flex-col items-center w-full z-10">
                     <h1 className="font-['Montserrat',Helvetica] font-normal text-[#f1695b] text-[32px] text-center tracking-[-0.64px] leading-10 mb-12">
-                        onde?
+                        {pageTexts.whereText}
                     </h1>
 
                     <div className="flex flex-col gap-16 w-full max-w-md">
@@ -184,9 +196,10 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
             <section className="flex flex-col items-center bg-[#A1B89B] py-16 px-8 relative overflow-hidden">
                 <div className="flex flex-col items-center w-full mb-8">
                     <p className="w-full text-[#6f7a6a] text-base text-center leading-6 font-montserrat">
-                        Agradecemos a vossa confirmação até
-                        <br />
-                        <span className="font-semibold">30 de abril de 2025</span>
+                        {pageTexts.whereConfirmationText}
+                    </p>
+                    <p className="w-full text-[#6f7a6a] text-base text-center leading-6 font-montserrat font-semibold">
+                        {pageTexts.whereConfirmationDate}
                     </p>
                 </div>
 
@@ -258,7 +271,7 @@ const SaraERicardo: React.FC<{ data: any }> = ({ data }) => {
 };
 
 export const query = graphql`
-  query {
+  query ($language: String!) {
     ceremonyImage: file(relativePath: { eq: "sara-e-ricardo/frame-7.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH)
@@ -269,7 +282,17 @@ export const query = graphql`
         gatsbyImageData(layout: FULL_WIDTH)
       }
     }
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
   }
 `;
+
 
 export default SaraERicardo;
