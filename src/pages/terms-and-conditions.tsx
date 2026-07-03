@@ -16,13 +16,15 @@ type BlogData = {
 const TermsAndConditions: React.FC<PageProps<BlogData>> = ({ data }) => {
 
   return (
-    <div className="isolate bg-white">
+    <div className="bg-paper">
       <NavBar />
-      <main className="flex mx-auto max-w-5xl content-center justify-center items-center p-5 sm:p-10 lg:p-20">
+      <main className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+        <h1 className="font-montserrat text-3xl font-bold tracking-tight text-ink sm:text-4xl">Terms &amp; Conditions</h1>
+        <div className="mt-3 h-1 w-10 rounded-full bg-split-amber-500" />
         {
-          data.allMdx.nodes.map((node) => {
+          data.allMdx.nodes.map((node, index) => {
             return (
-              <p className="whitespace-pre-wrap display-linebreak break-words-per-line">{node.body}</p>
+              <p key={index} className="mt-8 whitespace-pre-wrap break-words text-base leading-7 text-ink-muted">{node.body}</p>
             );
           })
         }
