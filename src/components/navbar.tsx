@@ -1,7 +1,7 @@
 import * as React from "react";
 import type { HeadFC } from "gatsby";
 import { useState } from 'react';
-import { Dialog } from '@headlessui/react';
+import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { StaticImage } from 'gatsby-plugin-image';
 
@@ -46,7 +46,7 @@ const NavBar = () => {
                 </button>
             </nav>
             <Dialog as="div" open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)}>
-                <Dialog.Panel className="fixed inset-0 z-50 overflow-y-auto bg-paper px-4 py-2 sm:hidden">
+                <DialogPanel className="fixed inset-0 z-50 overflow-y-auto bg-paper px-4 py-2 sm:hidden">
                     <div className="flex h-16 items-center justify-between px-2">
                         <a href="/" className="flex items-center gap-2.5" onClick={() => setMobileMenuOpen(false)}>
                             <span className="sr-only">Split Counter App</span>
@@ -83,7 +83,7 @@ const NavBar = () => {
                             Get the app
                         </a>
                     </div>
-                </Dialog.Panel>
+                </DialogPanel>
             </Dialog>
         </header>
     );
