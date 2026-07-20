@@ -1,5 +1,8 @@
 <p align="center">
-  <img alt="Split Counter" src="src/images/icon-no-bg.png" width="72" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="src/images/icon-no-bg-white.png" />
+    <img alt="Split Counter" src="src/images/icon-no-bg.png" width="72" />
+  </picture>
 </p>
 <h1 align="center">Split Counter — Website</h1>
 <p align="center">

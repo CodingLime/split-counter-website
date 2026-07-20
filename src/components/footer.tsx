@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
                     <a href="/" className="flex items-center gap-2.5">
-                        <StaticImage className="w-9" src="../images/icon-no-bg.png" alt="Split Counter app logo" />
+                        <StaticImage className="w-9" src="../images/icon-no-bg-white.png" alt="Split Counter app logo" />
                         <span className="font-montserrat text-lg font-bold tracking-tight text-paper">
                             Split<span className="text-split-amber-500">Counter</span>
                         </span>
