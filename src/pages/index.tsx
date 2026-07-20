@@ -109,21 +109,21 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="relative mx-auto flex max-w-full items-end justify-center gap-4 sm:gap-6">
-          <div className="hidden w-40 -rotate-3 overflow-hidden rounded-3xl border border-ink/10 shadow-phone sm:block lg:w-44">
+          <div className="hidden aspect-[1179/2556] w-40 -rotate-3 overflow-hidden rounded-3xl border border-ink/10 shadow-phone sm:block lg:w-44">
             <StaticImage
               src="../images/screenshots/2-gameplay-2p.png"
               alt="Split Counter two player game"
               className="h-full w-full object-cover object-center"
             />
           </div>
-          <div className="w-40 -translate-y-6 overflow-hidden rounded-3xl border border-ink/10 shadow-phone sm:w-48 lg:w-52">
+          <div className="aspect-[1179/2556] w-40 -translate-y-6 overflow-hidden rounded-3xl border border-ink/10 shadow-phone sm:w-48 lg:w-52">
             <StaticImage
               src="../images/screenshots/1-main.png"
               alt="Split Counter home screen"
               className="h-full w-full object-cover object-center"
             />
           </div>
-          <div className="w-36 rotate-3 overflow-hidden rounded-3xl border border-ink/10 shadow-phone sm:w-40 lg:w-44">
+          <div className="aspect-[1179/2556] w-36 rotate-3 overflow-hidden rounded-3xl border border-ink/10 shadow-phone sm:w-40 lg:w-44">
             <StaticImage
               src="../images/screenshots/3-gameplay-4p.png"
               alt="Split Counter four player game"
@@ -157,7 +157,7 @@ const FeatureSection = () => {
               key={feature.name}
               className="flex flex-col gap-8 rounded-3xl border border-ink/5 bg-white p-8 sm:flex-row sm:items-center"
             >
-              <div className="mx-auto h-80 w-40 flex-none overflow-hidden rounded-2xl border border-ink/10 sm:mx-0">
+              <div className="mx-auto aspect-[1179/2556] w-40 flex-none overflow-hidden rounded-2xl border border-ink/10 sm:mx-0">
                 {feature.image}
               </div>
               <div>
