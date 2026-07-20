@@ -39,7 +39,7 @@ const features = [
 ];
 
 const StoreButtons = ({ dark = false }: { dark?: boolean }) => (
-  <div className="flex flex-col gap-3 sm:flex-row">
+  <div className="flex flex-col gap-3 sm:inline-grid sm:grid-cols-2">
     <a
       target="_blank"
       rel="noreferrer"
