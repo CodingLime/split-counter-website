@@ -50,7 +50,7 @@ const StoreButtons = ({ dark = false }: { dark?: boolean }) => (
           : "flex items-center justify-center gap-3 rounded-xl bg-ink px-6 py-3 transition-transform hover:-translate-y-0.5"
       }
     >
-      <StaticImage src="../images/play-store.png" alt="" className="w-6" />
+      <StaticImage src="../images/play-store.png" alt="" className={dark ? "w-6 invert" : "w-6"} />
       <span className="text-left leading-tight">
         <span className={dark ? "block text-[0.65rem] uppercase tracking-widest text-ink-muted" : "block text-[0.65rem] uppercase tracking-widest text-paper/60"}>Get it on</span>
         <span className={dark ? "block text-sm font-semibold text-ink" : "block text-sm font-semibold text-paper"}>Google Play</span>
