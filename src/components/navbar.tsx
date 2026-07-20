@@ -18,7 +18,7 @@ const NavBar = () => {
             <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Global">
                 <a href="/" className="flex items-center gap-2.5">
                     <span className="sr-only">Split Counter App</span>
-                    <StaticImage className="w-9" src="../images/icon-no-bg.png" alt="Split Counter app logo" />
+                    <StaticImage className="w-9" src="../images/icon-no-bg.png" alt="Split Counter app logo" backgroundColor="#f6f8fa" />
                     <span className="font-montserrat text-lg font-bold tracking-tight text-ink">
                         Split<span className="text-split-blue-500">Counter</span>
                     </span>
@@ -50,7 +50,7 @@ const NavBar = () => {
                     <div className="flex h-16 items-center justify-between px-2">
                         <a href="/" className="flex items-center gap-2.5" onClick={() => setMobileMenuOpen(false)}>
                             <span className="sr-only">Split Counter App</span>
-                            <StaticImage className="w-9" src="../images/icon-no-bg.png" alt="Split Counter app logo" />
+                            <StaticImage className="w-9" src="../images/icon-no-bg.png" alt="Split Counter app logo" backgroundColor="#f6f8fa" />
                             <span className="font-montserrat text-lg font-bold tracking-tight text-ink">
                                 Split<span className="text-split-blue-500">Counter</span>
                             </span>

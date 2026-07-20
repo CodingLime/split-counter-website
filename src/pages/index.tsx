@@ -13,28 +13,28 @@ const features = [
     accent: 'blue',
     description:
       "Track your life total in any format, from 1v1 to a full commander pod. Log commander damage under the matching opponent colour and it's deducted from your life total automatically — partner commanders included. And of course, there's a spot for those nasty poison counters too.",
-    image: <StaticImage src="../images/screenshots/9-gameplay-4p-dmg.png" alt="Split Counter tracking commander damage in a four player game" className="h-full w-full object-cover object-center" />
+    image: <StaticImage src="../images/screenshots/9-gameplay-4p-dmg.png" alt="Split Counter tracking commander damage in a four player game" className="h-full w-full object-cover object-center" backgroundColor="#ffffff" />
   },
   {
     name: 'Flip coins and roll dice',
     accent: 'amber',
     description:
       "Need a coin flip (or five) for those sweet Krark, the Thumbless triggers? We have you covered. Quick dice rolls from a D4 up to a D20 are built right in, so you never skip a beat digging through your bag mid-game.",
-    image: <StaticImage src="../images/screenshots/7-in-game-settings.png" alt="Split Counter in-game tools for coin flips and dice rolls" className="h-full w-full object-cover object-center" />
+    image: <StaticImage src="../images/screenshots/7-in-game-settings.png" alt="Split Counter in-game tools for coin flips and dice rolls" className="h-full w-full object-cover object-center" backgroundColor="#ffffff" />
   },
   {
     name: 'Search cards, in and out of games',
     accent: 'amber',
     description:
       "Look up any card straight from the home screen — or without ever leaving your game. Check oracle text, format legality, prices on Cardmarket and TCGplayer, and most importantly the official rulings, so you can settle interactions at the table from one place.",
-    image: <StaticImage src="../images/screenshots/6-search-in-game.jpg" alt="Searching for a card during a game in Split Counter" className="h-full w-full object-cover object-center" />
+    image: <StaticImage src="../images/screenshots/6-search-in-game.jpg" alt="Searching for a card during a game in Split Counter" className="h-full w-full object-cover object-center" backgroundColor="#ffffff" />
   },
   {
     name: 'Games with up to 6 players',
     accent: 'blue',
     description:
       "From a 1v1 duel to a six player free-for-all, Split keeps track of the whole table. Multiple layouts for four players and up mean the app mirrors everyone's real position at the table — with commander damage and poison counters for every seat. Nobody gets left out.",
-    image: <StaticImage src="../images/screenshots/8-gameplay-6p.png" alt="Split Counter six player game layout" className="h-full w-full object-cover object-center" />
+    image: <StaticImage src="../images/screenshots/8-gameplay-6p.png" alt="Split Counter six player game layout" className="h-full w-full object-cover object-center" backgroundColor="#ffffff" />
   },
 ];
 
@@ -50,7 +50,7 @@ const StoreButtons = ({ dark = false }: { dark?: boolean }) => (
           : "flex items-center justify-center gap-3 rounded-xl bg-ink px-6 py-3 transition-transform hover:-translate-y-0.5"
       }
     >
-      <StaticImage src="../images/play-store.png" alt="" className={dark ? "w-6 invert" : "w-6"} />
+      <StaticImage src="../images/play-store.png" alt="" className={dark ? "w-6 invert" : "w-6"} backgroundColor={dark ? "#f6f8fa" : "#071722"} />
       <span className="text-left leading-tight">
         <span className={dark ? "block text-[0.65rem] uppercase tracking-widest text-ink-muted" : "block text-[0.65rem] uppercase tracking-widest text-paper/60"}>Get it on</span>
         <span className={dark ? "block text-sm font-semibold text-ink" : "block text-sm font-semibold text-paper"}>Google Play</span>
@@ -66,7 +66,7 @@ const StoreButtons = ({ dark = false }: { dark?: boolean }) => (
           : "flex items-center justify-center gap-3 rounded-xl bg-ink px-6 py-3 transition-transform hover:-translate-y-0.5"
       }
     >
-      <StaticImage src="../images/apple-logo.png" alt="" className={dark ? "w-6 invert" : "w-6"} />
+      <StaticImage src="../images/apple-logo.png" alt="" className={dark ? "w-6 invert" : "w-6"} backgroundColor={dark ? "#f6f8fa" : "#071722"} />
       <span className="text-left leading-tight">
         <span className={dark ? "block text-[0.65rem] uppercase tracking-widest text-ink-muted" : "block text-[0.65rem] uppercase tracking-widest text-paper/60"}>Download on the</span>
         <span className={dark ? "block text-sm font-semibold text-ink" : "block text-sm font-semibold text-paper"}>App Store</span>
@@ -114,6 +114,7 @@ const HeroSection = () => {
               src="../images/screenshots/2-gameplay-2p.png"
               alt="Split Counter two player game"
               className="h-full w-full object-cover object-center"
+              backgroundColor="#eef7fc"
             />
           </div>
           <div className="aspect-[1179/2556] w-40 -translate-y-6 overflow-hidden rounded-3xl border border-ink/10 shadow-phone sm:w-48 lg:w-52">
@@ -121,6 +122,7 @@ const HeroSection = () => {
               src="../images/screenshots/1-main.png"
               alt="Split Counter home screen"
               className="h-full w-full object-cover object-center"
+              backgroundColor="#eef7fc"
             />
           </div>
           <div className="aspect-[1179/2556] w-36 rotate-3 overflow-hidden rounded-3xl border border-ink/10 shadow-phone sm:w-40 lg:w-44">
@@ -128,6 +130,7 @@ const HeroSection = () => {
               src="../images/screenshots/3-gameplay-4p.png"
               alt="Split Counter four player game"
               className="h-full w-full object-cover object-center"
+              backgroundColor="#eef7fc"
             />
           </div>
         </div>
