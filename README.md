@@ -1,54 +1,72 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
+  <img alt="Split Counter" src="src/images/icon-no-bg.png" width="72" />
 </p>
-<h1 align="center">
-  Gatsby minimal TypeScript starter
-</h1>
+<h1 align="center">Split Counter — Website</h1>
+<p align="center">
+  The marketing site for <a href="https://www.splitcounter.app">Split Counter</a>, an MTG life-counter and table companion app.
+</p>
 
-## 🚀 Quick start
+## About
 
-1.  **Create a Gatsby site.**
+This repo contains the public website for **Split Counter**, a Magic: The Gathering utility app for tracking games at the table. The site is a static, single-page marketing site built with Gatsby that showcases the app and links out to the mobile stores.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+Split Counter (the app) lets players:
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby
-    ```
+- Track life totals in any format, from 1v1 to a full six-player commander pod
+- Log commander damage per opponent colour (partner commanders included), auto-deducted from life total
+- Track poison counters
+- Flip coins and roll dice (D4–D20) without leaving the game
+- Search Magic cards for oracle text, rulings, format legality, and prices (Cardmarket/TCGplayer), in or out of a game
 
-2.  **Start developing.**
+The app is available on:
 
-    Navigate into your new site’s directory and start it up.
+- [Google Play](https://play.google.com/store/apps/details?id=app.splitcounter)
+- [App Store](https://apps.apple.com/us/app/split-counter-mtg-utility/id6446151892)
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## Tech stack
 
-3.  **Open the code and start customizing!**
+- [Gatsby 5](https://www.gatsbyjs.com/) + TypeScript
+- [Tailwind CSS](https://tailwindcss.com/) for styling (custom `split` blue/amber palette matching the app icon)
+- [Headless UI](https://headlessui.com/) + [Heroicons](https://heroicons.com/) for the mobile nav
+- [MDX](https://mdxjs.com/) for the legal pages (Privacy Policy, Terms & Conditions)
+- `gatsby-plugin-image` / `gatsby-plugin-sharp` for optimized screenshots
 
-    Your site is now running at http://localhost:8000!
+## Project structure
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+```
+src/
+├── components/       # NavBar, Footer
+├── content/           # MDX content (privacy policy, terms & conditions)
+├── images/            # App icon, store badges, and marketing screenshots
+├── pages/
+│   ├── index.tsx           # Home page (hero, features, CTA)
+│   ├── android-app.tsx      # Redirects to a mobile store
+│   ├── ios-app.tsx          # Redirects to a mobile store
+│   ├── privacy-policy.tsx
+│   ├── terms-and-conditions.tsx
+│   └── 404.tsx
+└── styles/            # Global + Tailwind CSS
+```
 
-4.  **Learn more**
+## Getting started
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+```shell
+npm install
+npm run develop
+```
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+Your site is now running at `http://localhost:8000`.
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+## Available scripts
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+| Script            | Description                                  |
+| ----------------- | --------------------------------------------- |
+| `npm run develop` | Start the local development server            |
+| `npm run build`   | Build the site for production                 |
+| `npm run serve`   | Serve the production build locally            |
+| `npm run clean`   | Clear the Gatsby cache and public folder       |
+| `npm run typecheck` | Run the TypeScript compiler without emitting |
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+## License
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+See [LICENSE](LICENSE).
