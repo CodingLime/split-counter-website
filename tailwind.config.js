@@ -43,10 +43,10 @@ module.exports = {
           muted: "#48606f",
           faint: "#7d919e",
         },
-        // Warm off-white tinted by the amber — replaces plain white/gray-50.
+        // Cool off-white grey with the blue's undertone — replaces plain white/gray-50.
         paper: {
-          DEFAULT: "#faf8f2",
-          deep: "#f3efe4",
+          DEFAULT: "#f6f8fa",
+          deep: "#e9eef2",
         },
       },
       fontFamily: {
