@@ -10,3 +10,7 @@ html {
     background-color: #ffdd8f;
     color: #071722;
 }
+
+section[id] {
+    scroll-margin-top: 4rem;
+}

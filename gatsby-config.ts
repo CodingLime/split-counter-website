@@ -4,7 +4,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: `Split Counter App - MTG Utility`,
     siteUrl: `https://www.splitcounter.app/`,
-    description: `Track your games like never before. From your life total, to commander damage (partners included!), to search about cards you want to know prices or rulings.`
+    description: `Split Counter is a life counter for Magic: The Gathering and Commander. Track life, poison, energy and commander damage for 2 to 6 players, with commander art, saved games and Scryfall card search.`
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin

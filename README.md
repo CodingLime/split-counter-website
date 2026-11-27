@@ -13,13 +13,14 @@
 
 This repo contains the public website for **Split Counter**, a Magic: The Gathering utility app for tracking games at the table. The site is a static, single-page marketing site built with Gatsby that showcases the app and links out to the mobile stores.
 
-Split Counter (the app) lets players:
+Split Counter (the app, 2.0) lets players:
 
-- Track life totals in any format, from 1v1 to a full six-player commander pod
-- Log commander damage per opponent colour (partner commanders included), auto-deducted from life total
-- Track poison counters
-- Flip coins and roll dice (D4–D20) without leaving the game
-- Search Magic cards for oracle text, rulings, format legality, and prices (Cardmarket/TCGplayer), in or out of a game
+- Track life, poison, energy and commander damage for 2 to 6 players, with several layouts per player count
+- Show each player's commander (and partner) art behind their life total, picking from any of the card's artworks
+- Pick up unfinished games from Home: games save as you play
+- Theme the board (Classic, Gradient, Midnight, Pattern) and choose which player gets which colour
+- Log life changes in Life History, roll dice, flip coins and pick who goes first
+- Search Magic cards via Scryfall for oracle text, rulings, prices and legality in all 23 formats, in or out of a game, with favourites, lists and search history
 
 The app is available on:
 
