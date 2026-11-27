@@ -15,56 +15,56 @@ const features = [
     accent: 'blue',
     description:
       "Choose each player's commander, and partner, from the game menu. Their art fills that player's panel behind the life total, so everyone can see who's who at a glance.",
-    image: <StaticImage src="../images/screenshots/01-board-commander-art.png" alt="Four player game with each player's commander art behind their life total" className={poster} />
+    image: <StaticImage src="../images/screenshots/02-board-commander-art.png" alt="Four player game with each player's commander art behind their life total" className={poster} />
   },
   {
     name: 'Pick from every artwork',
     accent: 'amber',
     description:
       "Prefer the Secret Lair version? Pick from any of your commander's printed artworks, straight from the game menu.",
-    image: <StaticImage src="../images/screenshots/03-commander-artwork-picker.png" alt="Commander artwork picker showing every printed artwork of a card" className={poster} />
+    image: <StaticImage src="../images/screenshots/05-commander-artwork-picker.png" alt="Commander artwork picker showing every printed artwork of a card" className={poster} />
   },
   {
     name: 'A player panel built for Commander',
     accent: 'amber',
     description:
       "Life sits in the middle. Swipe one way for poison and energy, the other way for commander damage, tracked per opponent with partners included. Badges show what's being tracked and turn to warning and lethal colours as a player gets close to losing.",
-    image: <StaticImage src="../images/screenshots/02-counters.png" alt="Player panels showing poison, energy and commander damage counters" className={poster} />
+    image: <StaticImage src="../images/screenshots/03b-counters-default-theme.png" alt="Player panels showing poison, energy and commander damage counters" className={poster} />
   },
   {
     name: 'Pick up where you left off',
     accent: 'blue',
     description:
       "Games save as you play. Close the app mid-game, and Home shows your unfinished game with its setup and when you last played. Tap to continue.",
-    image: <StaticImage src="../images/screenshots/04-home-continue-game.png" alt="Home screen with a Continue Game card for an unfinished game" className={poster} />
+    image: <StaticImage src="../images/screenshots/01-home-continue-game.png" alt="Home screen with a Continue Game card for an unfinished game" className={poster} />
   },
   {
     name: 'Search cards without leaving the game',
     accent: 'blue',
     description:
       "Look up any card from Home or mid-game without leaving the board. Star your favourite cards, sort them into lists of your own, and rerun recent searches in a tap.",
-    image: <StaticImage src="../images/screenshots/05-in-game-search-nicol-bolas.png" alt="Searching for Nicol Bolas from the in-game search sheet" className={poster} />
+    image: <StaticImage src="../images/screenshots/08b-in-game-search-nicol-bolas.png" alt="Searching for Nicol Bolas from the in-game search sheet" className={poster} />
   },
   {
     name: 'Legality and prices for every format',
     accent: 'amber',
     description:
       "Card details with oracle text, official rulings, prices and every print. Legality covers all 23 formats, with the most common shown first, so you can settle questions at the table.",
-    image: <StaticImage src="../images/screenshots/06-card-legality-prices.png" alt="Card details showing format legality and prices" className={poster} />
+    image: <StaticImage src="../images/screenshots/10-card-legality-prices.png" alt="Card details showing format legality and prices" className={poster} />
   },
   {
     name: 'Make the board yours with themes',
     accent: 'amber',
     description:
       "Choose Classic, Gradient, Midnight or Pattern for the game board, and use the Color Order editor to decide which player gets which colour.",
-    image: <StaticImage src="../images/screenshots/07-board-themes.png" alt="Game board theme picker with Gradient, Midnight, Pattern and Classic" className={poster} />
+    image: <StaticImage src="../images/screenshots/11-board-themes.png" alt="Game board theme picker with Gradient, Midnight, Pattern and Classic" className={poster} />
   },
   {
     name: 'Room for up to six players',
     accent: 'blue',
     description:
       "From a 1v1 duel to a six player free-for-all, with more than one layout for each player count so the app mirrors where everyone sits. And every player can tap, hold and swipe at the same time, so nobody waits their turn.",
-    image: <StaticImage src="../images/screenshots/08-six-players.png" alt="Six player game layout" className={poster} />
+    image: <StaticImage src="../images/screenshots/13b-six-players-default-theme.png" alt="Six player game layout" className={poster} />
   },
 ];
 
@@ -169,24 +169,24 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="relative mx-auto flex max-w-full items-end justify-center gap-4 sm:gap-6">
-          <div className="hidden aspect-[9/16] w-40 -rotate-3 overflow-hidden rounded-3xl border border-ink/10 shadow-phone sm:block lg:w-44">
+          <div className="hidden aspect-[1080/2424] w-40 -rotate-3 overflow-hidden rounded-3xl border border-ink/10 shadow-phone sm:block lg:w-44">
             <StaticImage
-              src="../images/screenshots/02-counters.png"
+              src="../images/screenshots/03b-counters-default-theme.png"
               alt="Poison, energy and commander damage counters"
               className="h-full w-full object-cover object-center"
             />
           </div>
-          <div className="aspect-[9/16] w-44 -translate-y-6 overflow-hidden rounded-3xl border border-ink/10 shadow-phone sm:w-52 lg:w-56">
+          <div className="aspect-[1080/2424] w-44 -translate-y-6 overflow-hidden rounded-3xl border border-ink/10 shadow-phone sm:w-52 lg:w-56">
             <StaticImage
-              src="../images/screenshots/01-board-commander-art.png"
+              src="../images/screenshots/02-board-commander-art.png"
               alt="Four player game with commander art behind each life total"
               className="h-full w-full object-cover object-center"
               loading="eager"
             />
           </div>
-          <div className="aspect-[9/16] w-36 rotate-3 overflow-hidden rounded-3xl border border-ink/10 shadow-phone sm:w-40 lg:w-44">
+          <div className="aspect-[1080/2424] w-36 rotate-3 overflow-hidden rounded-3xl border border-ink/10 shadow-phone sm:w-40 lg:w-44">
             <StaticImage
-              src="../images/screenshots/04-home-continue-game.png"
+              src="../images/screenshots/01-home-continue-game.png"
               alt="Home screen with a Continue Game card"
               className="h-full w-full object-cover object-center"
             />
@@ -218,7 +218,7 @@ const FeatureSection = () => {
               key={feature.name}
               className="flex flex-col gap-8 rounded-3xl border border-ink/5 bg-white p-8 sm:flex-row sm:items-center"
             >
-              <div className="mx-auto aspect-[9/16] w-48 flex-none overflow-hidden rounded-2xl border border-ink/10 shadow-phone sm:mx-0 sm:w-44">
+              <div className="mx-auto aspect-[1080/2424] w-48 flex-none overflow-hidden rounded-2xl border border-ink/10 shadow-phone sm:mx-0 sm:w-44">
                 {feature.image}
               </div>
               <div>
