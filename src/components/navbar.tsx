@@ -7,6 +7,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 const navigation = [
     { name: 'Home', href: '/' },
+    { name: "What's new", href: '/#whats-new' },
     { name: 'Features', href: '/#features' },
 ];
 
